@@ -1,0 +1,31 @@
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  border: 1px solid gainsboro;
+  border-radius: 50%;
+}
+
+.mat-card-header{
+   width: 20%;
+}
+.date{
+   font-size: 14px;
+   color: rgb(125, 125, 129);
+   padding: 0 4px 0 4px;
+}
+
+.mainName{
+   font-size: 20px;
+}
+.status{
+   font-size: 18px;
+}
+.profileIcon{
+   color: gray;
+}
+.subItem{
+   width: 230px;
+   text-align: left;
+}

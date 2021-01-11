@@ -1,0 +1,144 @@
+<div fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="space-evenly center">
+        <div *ngFor="let item of arr;let i = index">
+            <div *ngIf="i<3">
+                <div fxFlex="25%">
+                    <div class="allBox">
+                        <div fxLayout="row" fxLayoutAlign="space-between end" class="header">
+                            <div class="ml-5">
+                                <p>{{item.name}}</p>
+                            </div>
+                            <div class="ml-5">
+                                <button class="ml-5" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                          <mat-icon>more_vert</mat-icon>
+                       </button>
+                            </div>
+                            <mat-menu #belowMenu="matMenu" yPosition="below" #menu="matMenu">
+                                <button mat-menu-item>
+                          <mat-icon>create</mat-icon>
+                          <span>Edit</span>
+                       </button>
+                                <button mat-menu-item>
+                          <mat-icon>delete</mat-icon>
+                          <span>Delete</span>
+                       </button>
+                            </mat-menu>
+                        </div>
+                        <div fxLayout="row" fxLayoutAlign="space-between end" fxLayoutGap="10px" class="footer">
+                            <div fxFlex="25" class="profilePic mt-2 ml-3">
+                                <div [ngStyle]="{'display': item.inVisible ? 'block' : 'none'}" class="not">
+
+                                    <mat-icon class="plm" color="accent">not_interested</mat-icon>
+                                </div>
+                                <img [ngStyle]="{'opacity': item.inVisible?'0.2' : '1'}" [src]="item.img" alt={{item.name}}>
+                                <section class="example-section">
+                                    <mat-slide-toggle (click)="imgView(i)" class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">
+                                    </mat-slide-toggle>
+                                </section>
+                            </div>
+                            <div class="mr-2 py-2">
+                                <div class="">
+                                    <a mat-menu-item>
+                                        <mat-icon>card_membership</mat-icon><span class="itemName">{{item.post}}</span></a>
+                                </div>
+                                <div class="item">
+                                    <a mat-menu-item>
+                                        <mat-icon>mail_outline</mat-icon><span class="itemName">{{item.email}}</span>
+                                    </a>
+
+                                </div>
+                                <div class="item">
+                                    <a mat-menu-item>
+                                        <mat-icon>settings_phone</mat-icon><span class="itemName">{{item.phone}}</span>
+                                    </a>
+
+                                </div>
+                                <div class="item">
+                                    <a mat-menu-item>
+                                        <mat-icon>location_on</mat-icon><span class="itemName">{{item.address}}</span>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a mat-menu-item>
+                                        <mat-icon>date_range</mat-icon><span class="itemName">{{item.joinDate}}</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5" fxLayout="row" fxLayoutAlign="space-evenly center">
+        <div *ngFor="let item of arr;let i = index">
+            <div *ngIf="i>2">
+                <div class="test" fxFlex="25%">
+                    <div class="allBox">
+                        <div fxLayout="row" fxLayoutAlign="space-between end" class="header">
+                            <div class="ml-5">
+                                <p>{{item.name}}</p>
+                            </div>
+                            <div class="ml-5">
+                                <button class="ml-5" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                      <mat-icon>more_vert</mat-icon>
+                   </button>
+                            </div>
+                            <mat-menu #belowMenu="matMenu" yPosition="below" #menu="matMenu">
+                                <button mat-menu-item>
+                      <mat-icon>create</mat-icon>
+                      <span>Edit</span>
+                   </button>
+                                <button mat-menu-item>
+                      <mat-icon>delete</mat-icon>
+                      <span>Delete</span>
+                   </button>
+                            </mat-menu>
+                        </div>
+                        <div fxLayout="row" fxLayoutAlign="space-between end" fxLayoutGap="10px" class="footer">
+                            <div fxFlex="25" class="profilePic mt-2 ml-3">
+                                <div [ngStyle]="{'display': item.inVisible ? 'block' : 'none'}" class="not">
+
+                                    <mat-icon class="plm" color="accent">not_interested</mat-icon>
+                                </div>
+                                <img [ngStyle]="{'opacity': item.inVisible?'0.2' : '1'}" [src]="item.img" alt={{item.name}}>
+                                <section class="example-section">
+                                    <mat-slide-toggle (click)="imgView(i)" class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">
+                                    </mat-slide-toggle>
+                                </section>
+                            </div>
+                            <div class="mr-2 py-2">
+                                <div class="">
+                                    <a mat-menu-item>
+                                        <mat-icon>card_membership</mat-icon><span class="itemName">{{item.post}}</span></a>
+                                </div>
+                                <div class="item">
+                                    <a mat-menu-item>
+                                        <mat-icon>mail_outline</mat-icon><span class="itemName">{{item.email}}</span>
+                                    </a>
+
+                                </div>
+                                <div class="item">
+                                    <a mat-menu-item>
+                                        <mat-icon>settings_phone</mat-icon><span class="itemName">{{item.phone}}</span>
+                                    </a>
+
+                                </div>
+                                <div class="item">
+                                    <a mat-menu-item>
+                                        <mat-icon>location_on</mat-icon><span class="itemName">{{item.address}}</span>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a mat-menu-item>
+                                        <mat-icon>date_range</mat-icon><span class="itemName">{{item.joinDate}}</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

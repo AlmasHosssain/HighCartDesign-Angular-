@@ -1,0 +1,50 @@
+<div fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="20px">
+    <div class="pic" fxFlex="45%">
+
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions" style="width: 100%; height:280px; display: block;"></highcharts-chart>
+
+    </div>
+
+    <div fxFlex="55%" fxFlexFill>
+        <mat-card>
+            <div fxLayout="row" fxLayoutAlign="space-between">
+                <div class="input ml-5" fxFlex="75">
+                    <form [formGroup]="takeVale" class="example-form" (ngSubmit)="onSubmit()">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>To Do List</mat-label>
+                            <input matInput formControlName="mainValue" placeholder="Task to do.." name="value">
+                            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                        <mat-icon>close</mat-icon>
+                         </button>
+                        </mat-form-field>
+                        <span class="ml-5">
+                          <button mat-fab color="primary" aria-label="Example icon button with a delete icon" type="submit">
+                            <mat-icon>add</mat-icon>
+                          </button>
+                        </span>
+                    </form>
+                </div>
+            </div>
+            <div class="big my-3">
+                <mat-list>
+                    <mat-list-item *ngFor="let element of arr;let i = index">
+                        <mat-checkbox>
+                            {{element}}
+                            <button [checked]="checkedValue" (click)="deleteItem(i)" class="ml-5" mat-mini-fab color="warn">
+                              <mat-icon>delete_forever</mat-icon>
+                            </button>
+                        </mat-checkbox>
+                    </mat-list-item>
+                </mat-list>
+                <!-- <ul>
+                    <li *ngFor="let element of arr;let i = index">
+                        <mat-checkbox>
+                            {{element}}
+                        </mat-checkbox>
+                        <mat-icon color="warn">delete_forever</mat-icon>
+                    </li>
+                </ul> -->
+            </div>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+.header {
+    background-color: #283593;
+    width: 300px;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.allBox {
+    width: 300px;
+    box-shadow: 1px 1px 15px gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.test {
+    margin-left: -10%;
+}
+
+.footer {
+    width: 300px;
+    .profilePic {
+        .not {
+            position: absolute;
+            margin-top: 28px;
+            z-index: 1;
+            width: 200px;
+            height: 200px;
+            margin-left: 28px;
+        }
+        img {
+            height: 80px;
+            width: 80px;
+            object-fit: fill;
+            border-radius: 50%;
+        }
+        .example-section {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            height: 70px;
+            margin-left: 15px;
+        }
+    }
+    .item {
+        color: gray;
+        .itemName {
+            color: rgb(56, 55, 55);
+        }
+        margin-top: -20px;
+    }
+}

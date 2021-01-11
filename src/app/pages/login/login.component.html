@@ -1,0 +1,46 @@
+<div class="registration my-5 col-sm-6 offset-4" fxLayout="column" fxLayoutAlign="center center">
+    <div class="head text-center">
+        <button class="mt-5" [routerLink]="['/registration']" routerLinkActive="router-link-active" mat-fab color="accent" aria-label="Example icon button with a delete icon">
+      <mat-icon>login</mat-icon>
+    </button><br><br>
+        <p>
+            Don't have An Account? <a class="ml-1" [routerLink]="['/registration']" routerLinkActive="router-link-active">Sign
+        up now!</a>
+        </p>
+    </div>
+    <div class="tail">
+
+    </div>
+</div>
+
+<div class="box text-center col-sm-6 offset-4">
+    <form [formGroup]="userLogin" (ngSubmit)="onSubmit()">
+        <h2 class="mt-4">MEMBER LOGIN</h2>
+        <div class="boxItem">
+            <mat-form-field appearance="standard">
+                <mat-label>Email</mat-label>
+                <input (blur)="logValidationError()" matInput placeholder="Enter your email please" formControlName="email">
+                <div *ngIf="formError.email">
+                    <small class="text-danger">
+            {{formError.email}}
+          </small>
+                </div>
+            </mat-form-field>
+        </div>
+
+        <div class="boxItem">
+            <mat-form-field appearance="standard">
+                <mat-label>Password</mat-label>
+                <input type="password" (blur)="logValidationError()" matInput placeholder="Enter your email please" formControlName="password">
+                <div *ngIf="formError.password">
+                    <small class="text-danger">
+            {{formError.password}}
+          </small>
+                </div>
+            </mat-form-field>
+        </div>
+        <button [disabled]="userLogin.invalid" [routerLink]="['/registration']" routerLinkActive="router-link-active" class="submitButton" mat-raised-button type="submit">
+      SIGN IN
+    </button>
+    </form>
+</div>

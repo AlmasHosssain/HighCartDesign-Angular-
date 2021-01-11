@@ -1,0 +1,70 @@
+<div class="registration my-3 col-sm-6 offset-4" fxLayout="column" fxLayoutAlign="center center">
+    <div class="head text-center">
+        <button class="mt-5" [routerLink]="['/login']" routerLinkActive="router-link-active" mat-fab color="accent" aria-label="Example icon button with a delete icon">
+      <mat-icon>person_add_alt_1</mat-icon>
+    </button><br><br>
+        <b>
+      Already Have An Account? <a class="ml-1" [routerLink]="['/login']"
+        routerLinkActive="router-link-active">SignIn!</a>
+    </b>
+    </div>
+    <div class="tail">
+    </div>
+</div>
+<div fxLayout="column" fxLayoutAlign="space-around center" class="box col-sm-6 offset-4 text-center">
+    <form [formGroup]="usedInfo" (ngSubmit)="onSubmit()">
+        <h2 class="mt-4">REGISTER MEMBER</h2>
+        <div class="boxItem">
+            <mat-form-field appearance="standard">
+                <mat-label>Full Name</mat-label>
+                <input (blur)="logValidationError()" matInput placeholder="Enter your name please" formControlName="fullName">
+                <div *ngIf="formError.fullName">
+                    <small class="text-danger">
+            {{formError.fullName}}
+          </small>
+                </div>
+            </mat-form-field>
+        </div>
+
+        <div class="boxItem">
+            <mat-form-field appearance="standard">
+                <mat-label>Email</mat-label>
+                <input (blur)="logValidationError()" matInput placeholder="Enter your email please" formControlName="email">
+                <div *ngIf="formError.email">
+                    <small class="text-danger">
+            {{formError.email}}
+          </small>
+                </div>
+            </mat-form-field>
+        </div>
+        <div formGroupName="passwordGroup">
+            <div class="boxItem">
+                <mat-form-field appearance="standard">
+                    <mat-label>Password</mat-label>
+                    <input type="password" (blur)="logValidationError()" matInput placeholder="Enter your password please" formControlName="password">
+                    <div *ngIf="formError.password">
+                        <small class="text-danger">
+              {{formError.password}}
+            </small>
+                    </div>
+                </mat-form-field>
+            </div>
+
+            <div class="boxItem">
+                <mat-form-field appearance="standard">
+                    <mat-label>Confirm Password</mat-label>
+                    <input type="password" (blur)="logValidationError()" matInput placeholder="Enter your conform password please" formControlName="confirmPassword">
+                    <div *ngIf="formError.confirmPassword || formError.passwordGroup">
+                        <small class="text-danger">
+              {{formError.confirmPassword?formError.confirmPassword : formError.passwordGroup}}
+            </small>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <button [disabled]="usedInfo.invalid" class="submitButton" mat-raised-button type="submit" [routerLink]="['/login']" routerLinkActive="router-link-active">
+      SIGN UP
+    </button>
+    </form>
+</div>

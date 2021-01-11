@@ -1,0 +1,60 @@
+.registration {
+    width: 380px;
+    height: 480px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 25px gray;
+}
+
+.head {
+    top: 0%;
+    height: 200px;
+    width: 380px;
+    background-color: #283593;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tail {
+    height: 280px;
+    width: 380px;
+    background-color: white;
+}
+
+b {
+    color: white;
+}
+
+a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    background-color: #283593;
+}
+
+.box {
+    border-radius: 3px;
+    height: 270px;
+    width: 310px;
+    box-shadow: 1px 1px 15px gray;
+    margin-top: -330px;
+    margin-left: 35%;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+}
+
+.boxItem {
+    margin-top: -25px;
+    width: 300px;
+}
+
+.submitButton {
+    width: 130px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: #283593;
+    position: absolute;
+    margin-left: -20%;
+    margin-top: -6px;
+    color: white;
+}

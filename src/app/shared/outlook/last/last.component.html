@@ -1,0 +1,55 @@
+<div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-between center">
+   <div fxFlex= "60">
+      <mat-card>
+         <highcharts-chart 
+  [Highcharts]="Highcharts"
+  [options]="chartOptions"
+
+  style="width: 100%; height: 425px; display: block;"
+></highcharts-chart>
+      </mat-card>
+   </div>
+
+   <div fxFlex="40">
+      
+         <mat-card>
+         <div class="ml-2" fxLayout="rox" fxLayoutAlign="space-between">
+         <div >
+            <mat-icon class="big">monetization_on</mat-icon>
+         </div>
+         <div class="less my-4">
+           <b><mat-icon >attach_money</mat-icon></b><span><b>37000</b><br><br><span class="ml-4 mt-5">Profit</span></span>
+         </div>
+            
+         </div>
+         </mat-card>
+      
+        <div class="my-3">
+         <mat-card>
+         <div class="ml-2" fxLayout="rox" fxLayoutAlign="space-between">
+         <div >
+            <mat-icon class="big">cloud_download</mat-icon>
+         </div>
+         <div class="less my-4">
+           <b><mat-icon >get_app</mat-icon></b><span><b>1700820</b><br><br><span class="ml-4 mt-4">Downloads</span></span>
+         </div>
+            
+         </div>
+         </mat-card>
+      </div>
+        <div>
+         <mat-card>
+         <div class="ml-2" fxLayout="rox" fxLayoutAlign="space-between">
+         <div >
+            <mat-icon class="big">shopping_cart</mat-icon>
+         </div>
+         <div class="less my-4">
+           <b><mat-icon >add_shopping_cart</mat-icon></b><span><b>17,65%</b><br><br><span class="ml-4 mt-4">Sales</span></span>
+         </div>
+            
+         </div>
+         </mat-card>
+      </div>
+   </div>
+</div>
+

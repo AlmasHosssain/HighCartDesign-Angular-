@@ -1,0 +1,123 @@
+<mat-nav-list>
+      <div class="text-center mt-3" fxLayout="row" fxLayoutAlign="space-around">
+         <div class="example-header-image ml-2">
+         </div>
+         <div>
+            <h4 class="mainName">Jio Dog Lover<br><span class="status">Student</span><br><span class="date">Member since May,2016</span></h4>
+            <!-- <p class="date">Member since May,2016</p> -->
+         </div>
+      </div>
+      <div class="mb-2" fxLayout="row" fxLayoutAlign="space-evenly">
+         <a [routerLink]="['/profile']" routerLinkActive="list-item-active">
+            <button mat-icon-button>
+               <mat-icon class="profileIcon">person_outline</mat-icon>
+            </button>
+         </a>
+         <a [routerLink]="['/mailbox']" routerLinkActive="list-item-active">
+            <button mat-icon-button>
+               <mat-icon class="profileIcon">mail_outline</mat-icon>
+            </button>
+         </a>
+         <a [routerLink]="['/login']" routerLinkActive="list-item-active">
+            <button mat-icon-button>
+               <mat-icon class="profileIcon">power_settings_new</mat-icon>
+            </button>
+         </a>
+      </div>
+      <mat-divider></mat-divider>
+      <div>
+         <a mat-list-item [routerLink]="['/']" routerLinkActive="list-item-active">
+            <mat-icon class="mx-2">dashboard</mat-icon>  <span class="ml-2">Dashboard</span>
+         </a>
+         <a mat-list-item [routerLink]="['/users']" routerLinkActive="list-item-active">
+            <mat-icon class="mx-2">people</mat-icon>
+               <span class="ml-2">Users</span>
+         </a>
+         <a mat-list-item [matMenuTriggerFor]="menu" class="mx-2">
+            <button mat-icon-button  aria-label="Example icon-button with a menu">
+               <mat-icon>laptop</mat-icon> <span class="ml-3">UI Features</span><span class="ml-5"><mat-icon>arrow_drop_down</mat-icon></span> 
+             </button>
+             <mat-menu #menu="matMenu">
+               <a mat-menu-item class="subItem">
+                 <mat-icon>keyboard</mat-icon>
+                 <span>Buttons</span>
+               </a>
+               <a mat-menu-item class="subItem">
+                 <mat-icon>card_membership</mat-icon>
+                 <span>Cards</span>
+               </a>
+               <a mat-menu-item class="subItem">
+                 <mat-icon>list</mat-icon>
+                 <span>Lists</span>
+               </a>
+               <a mat-menu-item class="subItem">
+                  <mat-icon>grid_on</mat-icon>
+                  <span>Grid</span>
+                </a>
+                <a mat-menu-item class="subItem">
+                  <mat-icon>launch</mat-icon>
+                  <span>Dialog</span>
+                </a>
+             </mat-menu>   
+         </a>
+
+         <a mat-list-item [routerLink]="['/users']" routerLinkActive="list-item-active">
+            <mat-icon class="mx-2">list</mat-icon>
+            <span class="ml-2">Dynamic Lists</span>
+         </a>
+         <a mat-list-item [routerLink]="['/users']" routerLinkActive="list-item-active">
+            <mat-icon class="mx-2">mail</mat-icon>
+            <span class="ml-2">Mail Box</span>
+         </a>
+         <a mat-list-item [routerLink]="['/users']" routerLinkActive="list-item-active">
+            <mat-icon class="mx-2">chat</mat-icon>
+            <span class="ml-2">Chats</span>
+         </a>
+
+
+         <a mat-list-item [matMenuTriggerFor]="menu1" class="mx-2">
+            <button mat-icon-button  aria-label="Example icon-button with a menu">
+               <mat-icon>library_books</mat-icon> <span class="ml-3">Pages</span><span class="ml-5"><mat-icon>arrow_drop_down</mat-icon></span> 
+             </button>
+             <mat-menu #menu1="matMenu" yPosition="below">
+               <a mat-menu-item class="subItem">
+                 <mat-icon>login</mat-icon>
+                 <span>Login</span>
+               </a>
+               <a mat-menu-item class="subItem">
+                  <mat-icon>person_add_alt_1</mat-icon>
+                  <span>Registration</span>
+                </a>
+               <a mat-menu-item class="subItem">
+                 <mat-icon>account_circle</mat-icon>
+                 <span>Profile</span>
+               </a>
+             </mat-menu>   
+         </a>
+         <a mat-list-item [routerLink]="['/users']" routerLinkActive="list-item-active">
+            <mat-icon class="mx-2">insert_invitation</mat-icon>
+            <span class="ml-2">Schedule</span>
+         </a>
+
+         <a mat-list-item [matMenuTriggerFor]="menu2" class="mx-2">
+            <button mat-icon-button  aria-label="Example icon-button with a menu">
+               <mat-icon>map</mat-icon> <span class="ml-3">Maps</span><span class="ml-5"><mat-icon>arrow_drop_down</mat-icon></span> 
+             </button>
+             <mat-menu #menu2="matMenu">
+               <a mat-menu-item class="subItem">
+                 <mat-icon>room</mat-icon>
+                 <span>Google Map</span>
+               </a>
+               <a mat-menu-item class="subItem">
+                 <mat-icon>gps_fixed</mat-icon>
+                 <span>Leaflet Maps</span>
+               </a>
+             </mat-menu>   
+         </a>
+         <a mat-list-item [routerLink]="['/users']" routerLinkActive="list-item-active">
+            <mat-icon class="mx-2">mouse</mat-icon>
+            <span class="ml-2">Drag & Drop</span>
+         </a>
+      </div>
+</mat-nav-list>
+
